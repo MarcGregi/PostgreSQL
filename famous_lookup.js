@@ -17,8 +17,9 @@ client.connect((err) => {
   if (err) {
     return console.error("Connection Error", err);
   }
-  console.log("Searching...");
-  client.query(`SELECT * FROM famous_people 
+  console.log("Searching..");
+  client.query(`SELECT * 
+  FROM famous_people 
   WHERE first_name = $1::text 
   OR last_name = $1::text`, [name], printName);
 
