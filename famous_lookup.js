@@ -24,7 +24,7 @@ client.connect((err) => {
 
   function printName(err, result) {
     if (err) {
-      return console.error("error running query", err);
+      return console.error("Rrror Running Your Query", err);
     }
     console.log(`Found ${result.rows.length} person(s) by the name '${name}':`);
     result.rows.forEach((e, i) => {
