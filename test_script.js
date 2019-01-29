@@ -1,5 +1,5 @@
 const pg = require("pg");
-const settings = require("./settings"); // settings.json
+const settings = require("./settings"); 
 
 const client = new pg.Client({
   user     : settings.user,
@@ -18,7 +18,7 @@ client.connect((err) => {
     if (err) {
       return console.error("error running query", err);
     }
-    console.log(result.rows[0].number); //output: 1
+    console.log(result.rows[0].number); 
     client.end();
   });
 });
